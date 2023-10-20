@@ -25,10 +25,10 @@
 * Пользователь postgres
 * Пароль от базы данных postgres
 
-    
-    POSTGRES_DB=<DATABASES_NAME>
-    POSTGRES_USER=<DATABASES_USER>
-    POSTGRES_PASSWORD=<DATABASES_PASSWORD> 
+      POSTGRES_DB=<DATABASES_NAME>
+      POSTGRES_USER=<DATABASES_USER>
+      POSTGRES_PASSWORD=<DATABASES_PASSWORD>
+  
 Для socker-compose 
 
     DATABASES_HOST=db 
