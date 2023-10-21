@@ -27,18 +27,18 @@ services:
     env_file:
       - .env
     command: >
-      bash -c "python manage.py migrate --noinput
-      python manage.py collectstatic --noinput
-      python manage.py csu
-      python manage.py runserver 0.0.0.0:8080"
+      bash -c "python manage.py migrate
+      && python manage.py collectstatic --noinput
+      && python manage.py csu
+      && python manage.py runserver 0.0.0.0:8000"
     ports:
-      - "8080:8080"
+      - "8000:8000"
     depends_on:
       - db
       - redis
 
   celery_worker:
-    build: .
+    build: .python
     container_name: celery_worker
     env_file:
       - .env
