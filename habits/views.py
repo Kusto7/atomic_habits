@@ -1,4 +1,4 @@
-from rest_framework import status
+from rest_framework import status, viewsets
 from rest_framework.generics import RetrieveAPIView, CreateAPIView, ListAPIView, DestroyAPIView, UpdateAPIView
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
@@ -8,6 +8,11 @@ from habits.paginators import HabitPaginator
 from habits.serializers import HabitSerializer
 from habits.services import create_periodic_task
 from habits.permissions import IsOwner
+
+
+class HabitsViewSet(viewsets.ModelViewSet):
+    serializer_class = HabitSerializer
+    queryset = Habit.objects.all()
 
 
 class HabitCreateView(CreateAPIView):
