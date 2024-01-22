@@ -29,7 +29,7 @@
       POSTGRES_DB=<DATABASES_NAME>
       POSTGRES_USER=<DATABASES_USER>
       POSTGRES_PASSWORD=<DATABASES_PASSWORD> 
-Для socker-compose 
+Для docker-compose 
 
     DATABASES_HOST=db 
 Необходимо получить api-ключ от [телеграм бота](https://t.me/BotFather)
